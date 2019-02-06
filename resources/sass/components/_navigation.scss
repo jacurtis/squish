@@ -2,3 +2,29 @@
   border-bottom: 1px solid $border-color;
   padding: 24px 0;
 }
+
+ul.#{$prefix}-sidebar-nav {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 0;
+  margin: 0;
+  list-style: none;
+  flex-direction: column;
+}
+.#{$prefix}-sidebar-nav-link {
+  color: $brand-color;
+  padding: 12px 0;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+
+  &.active {
+    color: darken($primary, 10%);
+  }
+
+  i {
+    font-size: 1.2rem;
+    margin-right: 8px;
+  }
+}
