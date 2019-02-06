@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="container m-t-50">
   <div class="columns">
     <div class="column is-half is-offset-one-quarter">
       <div class="card">
@@ -30,23 +30,25 @@
             </span> 
             @endif
             <div class="mb-6">              
-              <div class="field">
+              <div class="field m-t-15">
                 <b-checkbox name="remember">Remember Me</b-checkbox>
               </div>
             </div>
-            <div class="columns">
+            <div class="columns m-t-15">
               <div class="column">
                 <button class="button is-primary is-fullwidth" type="submit">
                   Sign In
                 </button>
               </div>
-              <div class="column">
-                <a class="button is-text" href="{{ route('password.request') }}">
-                  Forgot Password?
-                </a>
-              </div>
             </div>
           </form>
+        </div> <!-- end of .card-content -->
+      </div> <!-- end of .card -->
+      <div class="columns m-t-15">
+        <div class="column text-center">
+          <a class="button is-small is-text" href="{{ route('password.request') }}">
+            Forgot Your Password?
+          </a>
         </div>
       </div>
     </div>

@@ -1,0 +1,7 @@
+$textjustify: (left, center, right); // Leave this variable alone
+
+@each $justify in $textjustify {
+  .text-#{$justify} {
+    text-align: #{$justify};
+  }
+}
