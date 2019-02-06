@@ -20,7 +20,17 @@
 
 <body>
   <div id="app">
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <div class="container">
+      <nav class="sq-main-header">
+        <div class="sq-row">
+          <div class="sq-col">
+            <img src="{{ asset('svg/squish.svg') }}">
+          </div>
+        </div>
+      </nav>
+    </div>
+   
+    {{-- <nav class="navbar" role="navigation" aria-label="main navigation">
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item" href="/">
@@ -36,13 +46,13 @@
 
         <div id="navbarBasicExample" class="navbar-menu">
           <div class="navbar-start">
-            {{-- <a class="navbar-item">
-              Home
+          <a class="navbar-item">
+            Home
             </a>
 
-            <a class="navbar-item">
-              Documentation
-            </a> --}}
+            <aclass="navbar-item">
+            Documentation
+          </a>
 
 
           </div>
@@ -77,7 +87,7 @@
             @endauth
           </div>
         </div>
-    </nav>
+    </nav> --}}
 
     {{-- <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
       <div class="container">

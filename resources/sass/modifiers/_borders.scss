@@ -1,0 +1,13 @@
+$widthamounts: (0, 1, 2, 3, 4, 5, 10); // Adjust this to include the pixel amounts you need.
+$sides: (top, bottom, left, right); // Leave this variable alone
+
+@each $width in $widthamounts {
+  .border-#{$width} {
+    border-width: #{$width}px !important;
+  }
+  @each $side in $sides {
+    .border-#{str-slice($side, 0, 1)}-#{$width} {
+      margin-#{$side}-width: #{$width}px !important;
+    }
+  }
+}

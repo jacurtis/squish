@@ -1,9 +1,15 @@
-
+$prefix: 'sq';
 // Body
-$body-bg: #f8fafc;
+$body-bg: #ebebeb;
+$card-bg: #fafafa;
+$card-header: #ffffff;
+$brand-color: #405263;
+$typography-color: #212529;
+$typography-color-light: #495057;
 
 // Typography
-$font-family-sans-serif: "Nunito", sans-serif;
+$family-sans-serif: "Lato", sans-serif;
+$family-primary: $family-sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
@@ -18,3 +24,11 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+
+$primary: $blue;
+$link: $indigo;
+$info: $teal;
+$success: $green;
+$warning: $yellow;
+$danger: $red;
+$border-color: #d8d8d8;
