@@ -25,7 +25,9 @@
       <nav class="sq-main-header">
         <div class="sq-row">
           <div class="sq-col">
-            <img src="{{ asset('svg/squish.svg') }}">
+            <a href="{{ route('dashboard') }}">
+              <img src="{{ asset('svg/squish.svg') }}">
+            </a>
           </div>
           <div class="sq-col sq-text-right">
             <button class="sq-button sq-is-primary">
@@ -43,7 +45,7 @@
           <aside id="sq-main-sidebar" class="sq-col-2">
             <ul class="sq-sidebar-nav">
               <li class="sq-nav-item">
-                <a href="" class="sq-sidebar-nav-link active">
+                <a href="{{ route('dashboard') }}" class="sq-sidebar-nav-link {{ Nav::isRoute('dashboard') }}">
                   <i class="zi-dashboard"></i>
                   Dashboard
                 </a>

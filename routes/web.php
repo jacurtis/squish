@@ -10,8 +10,8 @@
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::redirect('/', '/'.str_finish(config('squish.path'), '/').'home');
+Route::redirect('/', '/'.str_finish(config('squish.path'), '/').'dashboard');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/dashboard', 'HomeController@index')->name('dashboard');
