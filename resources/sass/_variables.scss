@@ -4,14 +4,6 @@ $prefix: 'sq';
 $grid-columns: 12;
 $grid-gutters: 15px;
 
-// Body
-$body-bg: #ebebeb;
-$card-bg: #fafafa;
-$card-header: #ffffff;
-$brand-color: #405263;
-$typography-color: #212529;
-$typography-color-light: #495057;
-
 // Typography
 $family-sans-serif: "Lato", sans-serif;
 $family-primary: $family-sans-serif;
@@ -29,6 +21,7 @@ $yellow: #ffed4a;
 $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
+$white: #ffffff;
 
 $primary: $purple;
 $link: $indigo;
@@ -37,3 +30,14 @@ $success: $green;
 $warning: $yellow;
 $danger: $red;
 $border-color: #d8d8d8;
+
+// Specific Color Functions
+$body-bg: #ebebeb;
+$card-bg: #fafafa;
+$card-header: $white;
+$brand-color: #405263;
+$sidebar-links: #495057;
+$sidebar-icons: #9aa0a7;
+$sidebar-links-active: darken($primary, 8%);
+$typography-color: #212529;
+$typography-color-light: #495057;

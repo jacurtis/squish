@@ -26,23 +26,70 @@
           <div class="sq-col">
             <img src="{{ asset('svg/squish.svg') }}">
           </div>
-          @auth
-            <div class="sq-col text-right">
-              <a class="button is-text" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                Logout
-                              </a>
-              <!-- Logout Form -->
-              <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-                @csrf
-              </form>
-            </div>
-          @endauth
+          <div class="sq-col text-right">
+            <button class="button is-primary">
+              <i class="zi zi-add-outline m-r-10"></i>
+              Squish New Link
+            </button>
+          </div>
         </div>
       </nav>
     </div>
 
-    <main class="py-4">
-      @yield('content')
+    <main class="main m-t-25">
+      <div class="container">
+        <div class="sq-row">
+          <aside id="sq-main-sidebar" class="sq-col-2">
+            <ul class="sq-sidebar-nav">
+              <li class="sq-nav-item">
+                <a href="" class="sq-sidebar-nav-link active">
+                                <i class="zi-dashboard"></i>
+                                Dashboard
+                            </a>
+              </li>
+              <li class="sq-nav-item">
+                <a href="" class="sq-sidebar-nav-link">
+                                <i class="zi-link"></i>
+                                Squished Links
+                            </a>
+              </li>
+              <li class="sq-nav-item">
+                <a href="" class="sq-sidebar-nav-link">
+                                <i class="zi-paste"></i>
+                                Reports
+                            </a>
+              </li>
+              <li class="sq-nav-item">
+                <a href="" class="sq-sidebar-nav-link">
+                                <i class="zi-servers"></i>
+                                Domains
+                            </a>
+              </li>
+              <li class="sq-nav-item">
+                <a href="" class="sq-sidebar-nav-link">
+                                <i class="zi-cog"></i>
+                                Settings
+                            </a>
+              </li>
+              <hr> @auth
+              <li class="sq-nav-item">
+                <a class="sq-sidebar-nav-link" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                <i class="zi-close-outline"></i>
+                                Logout
+                            </a>
+                <!-- Logout Form -->
+                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                  @csrf
+                </form>
+              </li>
+              @endauth
+            </ul>
+          </aside>
+          <div class="sq-col-10">
+            @yield('content')
+          </div>
+        </div>
+      </div>
     </main>
   </div>
 

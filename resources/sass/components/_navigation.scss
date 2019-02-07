@@ -12,18 +12,28 @@ ul.#{$prefix}-sidebar-nav {
   flex-direction: column;
 }
 .#{$prefix}-sidebar-nav-link {
-  color: $brand-color;
+  color: $sidebar-links;
   padding: 12px 0;
   font-size: 16px;
   display: flex;
   align-items: center;
   text-decoration: none;
+  &:hover {
+    color: darken($sidebar-links, 8%);
+    i {
+      color: darken($sidebar-icons, 8%);
+    }
+  }
 
   &.active {
-    color: darken($primary, 10%);
+    color: $sidebar-links-active;
+    i {
+      color: $sidebar-links-active;
+    }
   }
 
   i {
+    color: $sidebar-icons;
     font-size: 1.2rem;
     margin-right: 8px;
   }
