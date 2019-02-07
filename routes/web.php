@@ -15,3 +15,4 @@ Route::redirect('/', '/'.str_finish(config('squish.path'), '/').'dashboard');
 Auth::routes();
 
 Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+Route::resource('domains', 'DomainController');

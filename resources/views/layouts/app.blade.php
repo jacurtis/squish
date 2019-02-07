@@ -63,7 +63,7 @@
                 </a>
               </li>
               <li class="sq-nav-item">
-                <a href="" class="sq-sidebar-nav-link">
+                <a href="{{ route('domains.index') }}" class="sq-sidebar-nav-link {{ Nav::isResource('domains') }}">
                   <i class="zi-servers"></i>
                   Domains
                 </a>

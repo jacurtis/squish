@@ -26,6 +26,36 @@
       background-color: darken($primary, 3%);
     }
   }
+  &.#{$prefix}-is-dark {
+    background-color: #6c757d;
+    border-color: transparent;
+    color: $white;
+
+    &:hover,
+    &:focus {
+      background-color: darken(#6c757d, 5%);
+    }
+  }
+  &.#{$prefix}-is-info {
+    background-color: $info;
+    border-color: transparent;
+    color: $info-invert;
+
+    &:hover,
+    &:focus {
+      background-color: darken($info, 5%);
+    }
+  }
+  &.#{$prefix}-is-success {
+    background-color: $success;
+    border-color: transparent;
+    color: $success-invert;
+
+    &:hover,
+    &:focus {
+      background-color: darken($success, 5%);
+    }
+  }
   &.#{$prefix}-is-text {
     background-color: transparent;
     border-color: transparent;

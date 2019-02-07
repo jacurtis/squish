@@ -22,14 +22,19 @@ $green: #38c172;
 $teal: #4dc0b5;
 $cyan: #6cb2eb;
 $white: #ffffff;
+$black: #0a0a0a;
 
 $primary: $purple;
 $primary-invert: $white;
 $link: $indigo;
 $info: $teal;
+$info-invert: $white;
 $success: $green;
+$success-invert: $white;
 $warning: $yellow;
+$warning-invert: $black;
 $danger: $red;
+$danger-invert: $white;
 $border-color: #d8d8d8;
 
 // Specific Color Functions
@@ -42,3 +47,8 @@ $sidebar-icons: #9aa0a7;
 $sidebar-links-active: darken($primary, 8%);
 $typography-color: #212529;
 $typography-color-light: #495057;
+
+// Table
+$table-header-bg: #ebecee;
+$table-header-font-weight: 400;
+$table-border: #dee2e6;

@@ -18,6 +18,8 @@
     margin-bottom: 0;
     background-color: $card-header;
     border-bottom: 0 solid rgba(0,0,0,0.125);
+    display: flex;
+    justify-content: space-between;
     &:first-child {
       border-radius: 5px 5px 0 0;
     }
@@ -25,6 +27,45 @@
   .#{$prefix}-card-body {
     flex: 1 1 auto;
     padding: 1rem 1.25rem;
+
+    &.#{$prefix}-contains-table {
+      width: 100%;
+      display: block;
+      padding: 0;
+
+      &.#{$prefix}-enable-hover tbody tr {
+        background: transparent;
+        &:hover {
+          background-color: lighten($primary, 34%);
+        }
+      }
+
+      table.#{$prefix}-card-table {
+        margin: 0;
+        width: 100%;
+        background-color: transparent;
+        border-collapse: collapse;
+
+        thead th {
+          vertical-align: bottom;
+          border-bottom: 2px solid $table-border;
+        }
+        th {
+          background-color: $table-header-bg;
+          font-weight: $table-header-font-weight;
+          padding: 0.5rem 1.25rem;
+          border: 0;
+        }
+        td {
+          padding: 1.25rem;
+          vertical-align: top;
+          border-top: 1px solid $table-border;
+        }
+        tr:first-child td {
+          border: 0;
+        }
+      }
+    }
 
     &.edgeless {
       padding: 0;
