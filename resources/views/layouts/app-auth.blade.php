@@ -20,11 +20,11 @@
 
 <body>
   <div id="app">
-    <div class="container">
+    <div class="sq-m-t-30 container">
       <nav class="sq-main-header sq-border-b-0 sq-flex sq-justify-center">
         <div class="sq-row">
           <div class="sq-col">
-            <img src="{{ asset('svg/squish.svg') }}">
+            <img src="{{ asset('svg/squish.svg') }}" style="height:50px;">
           </div>
           {{-- <div class="sq-col text-right">
             <button class="button is-primary">

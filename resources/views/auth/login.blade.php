@@ -1,16 +1,14 @@
-@extends('layouts.app-fullwidth')
+@extends('layouts.app-auth')
 
 @section('content')
-<div class="container m-t-50">
+<div class="container">
   <div class="columns">
     <div class="column is-half is-offset-one-quarter">
-      <div class="card">
-        <header class="card-header">
-          <p class="card-header-title">
-            Log in
-          </p>
+      <div class="sq-card">
+        <header class="sq-card-header">
+          Log in
         </header>
-        <div class="card-content">
+        <div class="sq-card-body">
           <form method="POST" action="{{ route('login') }}">
             @csrf
             <b-field label="Email">
@@ -30,13 +28,13 @@
             </span> 
             @endif
             <div class="mb-6">              
-              <div class="field m-t-15">
+              <div class="field sq-p-t-10">
                 <b-checkbox name="remember">Remember Me</b-checkbox>
               </div>
             </div>
-            <div class="columns m-t-15">
+            <div class="columns sq-m-t-10">
               <div class="column">
-                <button class="button is-primary is-fullwidth" type="submit">
+                <button class="sq-button sq-is-primary sq-is-fullwidth" type="submit">
                   Sign In
                 </button>
               </div>
@@ -44,9 +42,9 @@
           </form>
         </div> <!-- end of .card-content -->
       </div> <!-- end of .card -->
-      <div class="columns m-t-15">
-        <div class="column text-center">
-          <a class="button is-small is-text" href="{{ route('password.request') }}">
+      <div class="columns sq-m-t-10">
+        <div class="column sq-text-center">
+          <a class="sq-button sq-is-small sq-is-text" href="{{ route('password.request') }}">
             Forgot Your Password?
           </a>
         </div>

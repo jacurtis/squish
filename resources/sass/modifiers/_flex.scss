@@ -1,0 +1,11 @@
+$justifyoptions: (start: flex-start, center: center, end: flex-end, between: space-between, around: space-around);
+
+.#{$prefix}-flex {
+  display: flex;
+}
+
+@each $justify, $justifycss in $justifyoptions {
+  .#{$prefix}-justify-#{$justify} {
+    justify-content: $justifycss !important;
+  }
+}

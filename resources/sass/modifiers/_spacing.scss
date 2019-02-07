@@ -2,19 +2,24 @@ $spaceamounts: (0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 75, 100); // Adjust th
 $sides: (top, bottom, left, right); // Leave this variable alone
 
 @each $space in $spaceamounts {
-  .m-#{$space} {
+  .#{$prefix}-m-#{$space} {
     margin: #{$space}px !important;
   }
-  .p-#{$space} {
+  .#{$prefix}-p-#{$space} {
     padding: #{$space}px !important;
   }
   @each $side in $sides {
-    .m-#{str-slice($side, 0, 1)}-#{$space} {
+    .#{$prefix}-m-#{str-slice($side, 0, 1)}-#{$space} {
       margin-#{$side}: #{$space}px !important;
     }
 
-    .p-#{str-slice($side, 0, 1)}-#{$space} {
+    .#{$prefix}-p-#{str-slice($side, 0, 1)}-#{$space} {
       padding-#{$side}: #{$space}px !important;
     }
   }
+}
+
+.#{$prefix}-m-auto {
+  margin-left: auto;
+  margin-right: auto;
 }
