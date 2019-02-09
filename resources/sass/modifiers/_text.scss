@@ -5,3 +5,15 @@ $textjustify: (left, center, right); // Leave this variable alone
     text-align: #{$justify};
   }
 }
+
+.#{$prefix}-text-bold {
+  font-weight: bold !important;
+}
+
+.#{$prefix}-text-white {
+  color: $white;
+}
+
+.#{$prefix}-text-uppercase {
+  text-transform: uppercase;
+}

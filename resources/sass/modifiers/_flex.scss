@@ -1,4 +1,6 @@
 $justifyoptions: (start: flex-start, center: center, end: flex-end, between: space-between, around: space-around);
+$alignoptions: (start: flex-start, center: center, end: flex-end, between: space-between, around: space-around, stretch: stretch);
+$alignitemsoptions: (start: flex-start, center: center, end: flex-end, baseline: baseline, stretch: stretch);
 
 .#{$prefix}-flex {
   display: flex;
@@ -7,5 +9,19 @@ $justifyoptions: (start: flex-start, center: center, end: flex-end, between: spa
 @each $justify, $justifycss in $justifyoptions {
   .#{$prefix}-justify-#{$justify} {
     justify-content: $justifycss !important;
+  }
+}
+
+@each $align,
+$aligncss in $alignoptions {
+  .#{$prefix}-align-#{$align} {
+    align-content: $aligncss !important;
+  }
+}
+
+@each $align,
+$aligncss in $alignitemsoptions {
+  .#{$prefix}-align-items-#{$align} {
+    align-items: $aligncss !important;
   }
 }

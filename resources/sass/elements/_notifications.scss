@@ -8,6 +8,18 @@
     background-color: $primary;
     color: $primary-invert;
   }
+  &.#{$prefix}-is-success {
+    background-color: $success;
+    color: $success-invert;
+  }
+  &.#{$prefix}-is-success-muted {
+    background-color: lighten($success, 35%);
+    color: darken($success, 20%) !important;
+  }
+  &.#{$prefix}-is-danger {
+    background-color: $danger;
+    color: $danger-invert;
+  }
   &.#{$prefix}-is-dark {
     background-color: #6c757d;
     color: $white;

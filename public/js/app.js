@@ -43397,7 +43397,8 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /***/ (function(module, exports, __webpack_require__) {
 
 var map = {
-	"./components/SqInput.vue": 39
+	"./components/SqInput.vue": 39,
+	"./components/SqSwitch.vue": 52
 };
 function webpackContext(req) {
 	return __webpack_require__(webpackContextResolve(req));
@@ -44098,6 +44099,280 @@ if (false) {
 /***/ (function(module, exports) {
 
 // removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 49 */,
+/* 50 */,
+/* 51 */,
+/* 52 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(53)
+}
+var normalizeComponent = __webpack_require__(45)
+/* script */
+var __vue_script__ = __webpack_require__(55)
+/* template */
+var __vue_template__ = __webpack_require__(56)
+/* template functional */
+var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = "data-v-abe3c0c6"
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __vue_script__,
+  __vue_template__,
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "resources/js/components/SqSwitch.vue"
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-abe3c0c6", Component.options)
+  } else {
+    hotAPI.reload("data-v-abe3c0c6", Component.options)
+  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+module.exports = Component.exports
+
+
+/***/ }),
+/* 53 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(54);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(43)("6b5c94a6", content, false, {});
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-abe3c0c6\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SqSwitch.vue", function() {
+     var newContent = require("!!../../../node_modules/css-loader/index.js!../../../node_modules/vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-abe3c0c6\",\"scoped\":true,\"hasInlineConfig\":true}!../../../node_modules/sass-loader/lib/loader.js!../../../node_modules/vue-loader/lib/selector.js?type=styles&index=0!./SqSwitch.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 54 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(42)(false);
+// imports
+
+
+// module
+exports.push([module.i, "\n.ios-switch[data-v-abe3c0c6] {\n  display: -webkit-box;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n      -ms-flex-align: center;\n          align-items: center;\n  margin: 0;\n}\n.ios-switch input[type=checkbox][data-v-abe3c0c6] {\n    display: none;\n}\n.ios-switch label[data-v-abe3c0c6] {\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    font-weight: bold;\n    margin-left: 10px;\n    font-family: sans-serif;\n}\n.ios-switch .switch-body[data-v-abe3c0c6] {\n    border: solid 1px grey;\n    border-radius: 999px;\n    display: -webkit-inline-box;\n    display: -ms-inline-flexbox;\n    display: inline-flex;\n    -webkit-box-pack: start;\n        -ms-flex-pack: start;\n            justify-content: flex-start;\n    cursor: pointer;\n    width: 48px;\n    background-color: #ddd;\n    -webkit-box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.1);\n            box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.1);\n    -webkit-transition: all 0.2s ease;\n    transition: all 0.2s ease;\n}\n.ios-switch .switch-body .toggle[data-v-abe3c0c6] {\n      border-radius: 50%;\n      border: solid 1px grey;\n      width: 24px;\n      height: 24px;\n      background-color: white;\n      -webkit-box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);\n              box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.25);\n      -webkit-box-sizing: border-box;\n              box-sizing: border-box;\n      -webkit-transition: -webkit-transform 0.3s ease;\n      transition: -webkit-transform 0.3s ease;\n      transition: transform 0.3s ease;\n      transition: transform 0.3s ease, -webkit-transform 0.3s ease;\n}\n.ios-switch.active .switch-body[data-v-abe3c0c6] {\n    background-color: #38c172;\n}\n.ios-switch.active .switch-body .toggle[data-v-abe3c0c6] {\n      -webkit-transform: translateX(100%);\n              transform: translateX(100%);\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 55 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  inheritAttrs: false,
+  props: {
+    value: {
+      type: Boolean,
+      default: false
+    }
+  },
+  computed: {
+    inputListeners: function inputListeners() {
+      var vm = this;
+      return Object.assign({}, this.$listeners, {
+        input: function input(event) {
+          vm.$emit('input', event.target.checked);
+        }
+      });
+    }
+  },
+  methods: {
+    toggleSwitch: function toggleSwitch() {
+      this.$emit('input', !this.value);
+    }
+  }
+});
+
+/***/ }),
+/* 56 */
+/***/ (function(module, exports, __webpack_require__) {
+
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    {
+      staticClass: "ios-switch",
+      class: { active: _vm.value },
+      on: { click: _vm.toggleSwitch }
+    },
+    [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "input",
+        _vm._g(
+          _vm._b(
+            {
+              directives: [
+                {
+                  name: "model",
+                  rawName: "v-model",
+                  value: _vm.value,
+                  expression: "value"
+                }
+              ],
+              attrs: { type: "checkbox" },
+              domProps: {
+                checked: Array.isArray(_vm.value)
+                  ? _vm._i(_vm.value, null) > -1
+                  : _vm.value
+              },
+              on: {
+                change: function($event) {
+                  var $$a = _vm.value,
+                    $$el = $event.target,
+                    $$c = $$el.checked ? true : false
+                  if (Array.isArray($$a)) {
+                    var $$v = null,
+                      $$i = _vm._i($$a, $$v)
+                    if ($$el.checked) {
+                      $$i < 0 && (_vm.value = $$a.concat([$$v]))
+                    } else {
+                      $$i > -1 &&
+                        (_vm.value = $$a
+                          .slice(0, $$i)
+                          .concat($$a.slice($$i + 1)))
+                    }
+                  } else {
+                    _vm.value = $$c
+                  }
+                }
+              }
+            },
+            "input",
+            _vm.$attrs,
+            false
+          ),
+          _vm.inputListeners
+        )
+      ),
+      _vm._v(" "),
+      _c("label", [_vm._t("default")], 2)
+    ]
+  )
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("span", { staticClass: "switch-body" }, [
+      _c("span", { staticClass: "toggle" })
+    ])
+  }
+]
+render._withStripped = true
+module.exports = { render: render, staticRenderFns: staticRenderFns }
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-hot-reload-api")      .rerender("data-v-abe3c0c6", module.exports)
+  }
+}
 
 /***/ })
 /******/ ]);

@@ -26,6 +26,23 @@
       background-color: darken($primary, 3%);
     }
   }
+  &.#{$prefix}-is-danger {
+    background-color: $danger;
+    border-color: transparent;
+    color: $danger-invert;
+    &:hover, &:focus {
+      background-color: darken($danger, 3%);
+    }
+    &.sq-is-outlined {
+      border-color: $danger;
+      background-color: transparent;
+      color: $danger;
+      &:hover, &:focus {
+        background-color: $danger;
+        color: $danger-invert;
+      }
+    }
+  }
   &.#{$prefix}-is-dark {
     background-color: #6c757d;
     border-color: transparent;
@@ -72,5 +89,6 @@
   &.#{$prefix}-is-small {
     border-radius: 2px;
     font-size: 0.75rem;
+    padding: 4px 6px;
   }
 }
