@@ -15723,6 +15723,23 @@ i.is-xl {
   font-size: 0.75rem;
 }
 
+.sq-notification {
+  padding: 1.25rem 2.5rem 1.25rem 1.5rem;
+  position: relative;
+  border-radius: 4px;
+  background-color: #f5f5f5;
+}
+
+.sq-notification.sq-is-primary {
+  background-color: #9561e2;
+  color: #ffffff;
+}
+
+.sq-notification.sq-is-dark {
+  background-color: #6c757d;
+  color: #ffffff;
+}
+
 .sq-card {
   -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);
           box-shadow: 0 2px 3px rgba(0, 0, 0, 0.16);

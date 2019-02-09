@@ -3,12 +3,14 @@
 @section('content')
   <div class="sq-card">
     <div class="sq-card-header">
-      <span>{{ $domain->domain }}</span>
+      <p>{{ $domain->domain }}<br><span style="font-size:1rem;">These settings will define how any squished links that use this domain will be handled.</span></p>
+
       <button v-if="shouldSave" href="{{ route('domains.update', $domain->id) }}" class="sq-button sq-is-success">Save Changes</button>
-    </div>
+    </div> <!-- end of .sq-card-header -->
     <div class="sq-card-body">
       <sq-input placeholder="MyDomain.com" label="Domain" type="text" v-model="domain.domain" :validate="validationRules.domain"></sq-input>
-    </div>
+      <hr>
+    </div> <!-- end of .sq-card-body -->
   </div>
 @endsection
 
@@ -23,7 +25,7 @@
           domain: {
             type: 'regex',
             value: /(?:[\w\-]+\.)?[\w\-]+\.[a-z]{2,}/,
-            message: "Not a valid domain. Do not add http:// or https:// just 'MyDomain.com' will do"
+            message: "Not a valid domain. Do not add http:// or https://"
           }
         }
       },
